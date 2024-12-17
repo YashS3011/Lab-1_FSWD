@@ -1,8 +1,9 @@
 
+
 const movies = [
     { title: "Interstellar", genre: "Sci-Fi", rating: 8.8, releaseYear: 2014 },
     { title: "Fight club", genre: "Action", rating: 8.0, releaseYear: 1999 },
-    { title: "Oppenheimer", genre: "Sci-Fi", rating: 8.6, releaseYear: 2024 }
+    { title: "Oppengheimer", genre: "Sci-Fi", rating: 8.6, releaseYear: 2024 }
 ];
 
 const addMovie = (collection, movie) => {
@@ -40,3 +41,12 @@ movies.forEach(movie => {
     console.log(`${movie.title} (${movie.releaseYear}) is a ${movie.genre} movie with a rating of ${movie.rating} .`);
 })
 
+const listMoviesByName = (collection, word) => {
+    return collection.filter(movie => movie.title.includes(word));
+};
+
+console.log(listMoviesByName(movies, "gh"));
+
+// const longestLength = (collection) => {
+
+// }
