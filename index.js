@@ -1,5 +1,4 @@
 
-
 const movies = [
     { title: "Interstellar", genre: "Sci-Fi", rating: 8.8, releaseYear: 2014 },
     { title: "Fight club", genre: "Action", rating: 8.0, releaseYear: 1999 },
@@ -45,8 +44,13 @@ const listMoviesByName = (collection, word) => {
     return collection.filter(movie => movie.title.includes(word));
 };
 
-console.log(listMoviesByName(movies, "gh"));
-
-// const longestLength = (collection) => {
-
-// }
+function longestTitle()
+{
+    const longestTitle = movies.reduce((max, movie) => (movie.title.length > max.title.length ? movie : max));
+    console.log(`longestTitleMovie: ${longestTitle.title} with length ${longestTitle.title.length}`);
+}
+function smallestTitle()
+{
+    const smallestTitle = movies.reduce((min, movie) => (movie.title.length < min.title.length ? movie : min));
+    console.log(`smallestTitleMovie: ${smallestTitle.title} with length ${smallestTitle.title.length}`);
+}
