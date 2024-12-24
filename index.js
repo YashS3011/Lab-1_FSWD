@@ -40,17 +40,3 @@ movies.forEach(movie => {
     console.log(`${movie.title} (${movie.releaseYear}) is a ${movie.genre} movie with a rating of ${movie.rating} .`);
 })
 
-const listMoviesByName = (collection, word) => {
-    return collection.filter(movie => movie.title.includes(word));
-};
-
-function longestTitle()
-{
-    const longestTitle = movies.reduce((max, movie) => (movie.title.length > max.title.length ? movie : max));
-    console.log(`longestTitleMovie: ${longestTitle.title} with length ${longestTitle.title.length}`);
-}
-function smallestTitle()
-{
-    const smallestTitle = movies.reduce((min, movie) => (movie.title.length < min.title.length ? movie : min));
-    console.log(`smallestTitleMovie: ${smallestTitle.title} with length ${smallestTitle.title.length}`);
-}
